@@ -1,49 +1,24 @@
-import React from 'react';
-import Button from './components/button/Button';
+import React, { useState, useEffect } from "react";
 import './App.css';
 
-const App = () => {
-  const handleClick1 = () => {
-    alert('I am button 1 clicked');
-  };
+function App() {
+  const [count, setCount] = useState(0);
 
-  const handleClick2 = () => {
-    alert('I am button 2 clicked');
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 1000);
 
-  const buttonStyle1 = {
-    color: 'white',
-    background: 'red',
-    border:'transparent',
-    padding:'1rem',
-    borderRadius:'10px',
-    fontWeight:'bold',
-  };
-
-  const buttonStyle2 = {
-    color: 'white',
-    background: 'blue',
-    border:'transparent',
-    padding:'1rem',
-    borderRadius:'10px',
-    fontWeight:'bold',
-  };
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div className='container'>
-      <Button
-        buttonText="Button 1"
-        buttonStyle={buttonStyle1}
-        onClick={handleClick1}
-      />
-
-      <Button
-        buttonText="Button 2"
-        buttonStyle={buttonStyle2}
-        onClick={handleClick2}
-      />
+    <div className="container">
+      <h2>Counter</h2>
+      <div className="timer">{count}</div>;
     </div>
-  );
-};
+  )
+
+}
 
 export default App;
