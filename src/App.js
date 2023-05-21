@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import QuizApp from './components/quiz/Quiz';
+import TemperatureControlApp from './components/temperature/Temperature';
 
 const App = () => {
   return (
     <div className='container'>
-      <QuizApp/>
-    
+    <TemperatureControlApp/>
     </div>
   );
 };
