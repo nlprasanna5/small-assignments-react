@@ -1,21 +1,24 @@
-.temp {
-    height:100vh;
+.quotes {
     display: flex;
     flex-direction: column;
+    height: 60vh;
     justify-content: center;
     align-items: center;
-    gap:1rem;
 
 }
 
 button {
-    width:20vw;
-    background-color: white;
+    width:15vw;
+    background-color: blueviolet;
     border: transparent;
-    color: black;
-    padding:1rem;
+    color: white;
     font-weight: bold;
+    padding: 0.5rem;
     border-radius: 5px;
-    cursor: pointer;
+}
 
+p {
+    font-size: 1.2rem;
+    color: blue;
+    font-weight: bold;
 }

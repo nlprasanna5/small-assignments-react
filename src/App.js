@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import TemperatureControlApp from './components/temperature/Temperature';
+import RandomQuoteGenerator from './components/quote/Quote';
 
 const App = () => {
   return (
     <div className='container'>
-    <TemperatureControlApp/>
+   <RandomQuoteGenerator/>
     </div>
   );
 };
